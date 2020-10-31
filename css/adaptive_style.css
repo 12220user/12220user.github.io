@@ -3,3 +3,34 @@
         transform: translateY(-100px);
     }
 }
+
+@media screen and (max-width: 800px){
+    .topnav{
+        width: 100%;
+        transform: translateY(-50px);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 2.5%;
+    }
+    .topnav a{
+        font-size: 30px;
+        margin-top: 20px;
+        width: 80%;
+        
+    }
+    .project-block{
+        max-width: 100%;
+        max-height: 500px;
+    }
+    .about_as .bg{
+        background-size: 300% 100%;
+    }
+    .about_as_content{
+        margin-top: -200px;
+    }
+    .about_as .bg:hover{
+        background-size: 300% 100%;
+        background-position:0px 0px;
+    }
+}
