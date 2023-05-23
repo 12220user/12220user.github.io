@@ -1,39 +1,42 @@
 const file = {
-    write:function (name , value){
-        localStorage.setItem(name , value)
+    write: function(name, value) {
+        localStorage.setItem(name, value)
     },
-    read:function(name){
+    read: function(name) {
         return localStorage.getItem(name)
     }
 }
 
 const projects = {
-    get:function(){
+    get: function() {
         let data = file.read('prj-list')
-        if(data == '' || data== null || data == undefined || data== NaN){
+        if (data == '' || data == null || data == undefined || data == NaN) {
             data = 'demo'
         }
         return data.split(';')
     },
-    add:function(name){
-        if(!this.contains(name))file.write('prj-list' , file.read('prj-list') +';' + name)
+    add: function(name) {
+        if (!this.contains(name)) file.write('prj-list', file.read('prj-list') + ';' + name)
     },
-    remove:function(name){
+    remove: function(name) {
         var list = this.get()
         var nVl = ''
-        for(let i = 0 ; i < list.length; i++){
-            if(i == 0){
-                if(list[i] != name) nVl += list[i]
+        for (let i = 0; i < list.length; i++) {
+            if (i == 0) {
+                if (list[i] != name) nVl += list[i]
             }
-            if(list[i] != name) nVl += ';' + list[i]
+            if (list[i] != name) nVl += ';' + list[i]
         }
-        file.write('prj-list')
+        file.write('prj-list', nVl)
     },
-    contains:function(name ){
+    contains: function(name) {
         var list = this.get()
-        for(let i = 0 ; i < list.length; i++){
-            if(list[i] == name) return true
+        for (let i = 0; i < list.length; i++) {
+            if (list[i] == name) return true
         }
         return false
+    },
+    rmAll: function() {
+        file.write('prj-list', 'master')
     }
 }

@@ -17,72 +17,79 @@
         <p>QUIZ QUESTION GENTOOLs</p>
     </header>
     <div class="block">
-        <h3>Актуальная сборка :</h3>
+        <h3>Актуальная сборка темплейта:</h3>
         <a href="https://github.com/12220user/quiz_game_engine_webapp/releases/tag/last/">Скачать</a>
     </div>
 
     <div class="block">
+        <h1>Генератор вопросов</h1>
 
-        <h3>Проекты</h3>
-        <br>
-        <div id="projectNames">
 
+        <div class="block">
+
+            <h3>Проекты</h3>
+            <br>
+            <div id="projectNames">
+
+            </div>
+            <br>
+            <input type="text" name="" id="addTitle">
+            <button onclick="addProject()">Добавить рабочую область</button>
+            <br>
+            <button style="background-color: rgb(189, 51, 51);" onclick="deliteAllProject()">Удалить все проекты</button>
         </div>
-        <br>
-        <input type="text" name="" id="addTitle">
-        <button onclick="addProject()">Добавить рабочую область</button>
-    </div>
 
-    <div class="block">
-        <h3>Редактор вопросов <span id="cE"> Не выбран проект</span></h3>
-        <br>
-        <p>Категория: </p>
-        <input type="text" id="fCategory">
-        <p>Вопрос: </p>
-        <input type="text" id="fQ">
-        <p>Сложность </p>
-        <input type="range" name="" id="fH" min="0" max="10" value="0">
-        <p></p><br>
-        <p>* Не все поля ответа должны быть заполнены && отметьте галочкой верны ответ</p>
-        <br>
-        <p>Ответ 1</p>
-        <input type="text" id="fa1">
-        <input type="radio" name="r1" id="fr1" value="0" checked>
-        <p>Ответ 2</p>
-        <input type="text" id="fa2">
-        <input type="radio" name="r1" id="fr2" value="1">
-        <p>Ответ 3</p>
-        <input type="text" id="fa3">
-        <input type="radio" name="r1" id="fr3" value="2">
-        <p>Ответ 4</p>
-        <input type="text" id="fa4">
-        <input type="radio" name="r1" id="fr4" value="3">
-        <p></p><br>
-        <p>Путь к файлу изображения <sup>* если не требуется оставить пустым</sup></p>
-        <input type="text" id="fimg">
-        <p></p>
-        <br>
-        <button onclick="formToFormat()">Добавить</button>
-    </div>
+        <div class="block">
+            <h3>Редактор вопросов <span id="cE"> Не выбран проект</span></h3>
+            <br>
+            <p>Категория: </p>
+            <input type="text" id="fCategory">
+            <p>Вопрос: </p>
+            <input type="text" id="fQ">
+            <p>Сложность </p>
+            <input type="range" name="" id="fH" min="0" max="25" value="0">
+            <p></p><br>
+            <p>* Не все поля ответа должны быть заполнены && отметьте галочкой верны ответ</p>
+            <br>
+            <p class="a-text">Ответ 1</p>
+            <input type="text" id="fa1">
+            <input type="radio" name="r1" id="fr1" value="0" checked>
+            <p class="a-text">Ответ 2</p>
+            <input type="text" id="fa2">
+            <input type="radio" name="r1" id="fr2" value="1">
+            <p class="a-text">Ответ 3</p>
+            <input type="text" id="fa3">
+            <input type="radio" name="r1" id="fr3" value="2">
+            <p class="a-text">Ответ 4</p>
+            <input type="text" id="fa4">
+            <input type="radio" name="r1" id="fr4" value="3">
+            <p></p><br>
+            <p>Путь к файлу изображения <sup>* если не требуется оставить пустым</sup></p>
+            <input type="text" id="fimg">
+            <p></p>
+            <br>
+            <button onclick="formToFormat()">Добавить</button>
+        </div>
 
-    <div class="block">
-        <h3>Текстовое представление</h3>
-        <p><sub>* формат данных -> category|question|hard|right|img(empty in dont needed)|ansver0|ansver1|...|answerN</sub></p>
-        <br>
-        <textarea name="" id="txt_area" cols="120" rows="10"></textarea>
-        <br>
-        <button onclick="convertLogic()"> Сгенерировать </button>
-    </div>
+        <div class="block">
+            <h3>Текстовое представление</h3>
+            <p><sub>* формат данных -> category|question|hard|right|img(empty in dont needed)|ansver0|ansver1|...|answerN</sub></p>
+            <br>
+            <textarea name="" id="txt_area" cols="120" rows="10"></textarea>
+            <br>
+            <button onclick="convertLogic()"> Сгенерировать </button>
+        </div>
 
-    <div class="block">
-        <h2>Готовый объект</h2>
-        <button onclick="copy()">COPY</button>
-        <p id="result"></p>
-        <p></p><br>
-        <p></p><br>
-        <p></p><br>
-        <p></p><br>
-        <p></p><br>
+        <div class="block">
+            <h2>Готовый объект</h2>
+            <button onclick="copy()">COPY</button>
+            <p id="result"></p>
+            <p></p><br>
+            <p></p><br>
+            <p></p><br>
+            <p></p><br>
+            <p></p><br>
+        </div>
     </div>
 
     <script src="file.js"></script>
