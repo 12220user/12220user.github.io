@@ -16,33 +16,64 @@
     <header>
         <div class="header"></div>
         <div class="content">
-            <h1>12220 HUB</h1>
-            <p>коллекция инструментов и проектов от 12220</p>
+            <h1>12220 <span class="obg">HUB</span></h1>
+            <br>
+            <p id="d-title" style="color:rgb(211, 211, 211);"></p>
         </div>
     </header>
-    <div class="prj_nav">
-        <a href="#quiz">QUIZ GAME TEMPLATE TOOL</a>
-        <a href="https://github.com/12220user">GIT HUB</a>
+    <div>
+        <h2 class="with_bg center" style="padding-top: 30px;">Проекты :</h2>
+        <nav class="prj_nav">
+            <a href="#quiz">QUIZ ENGINE</a>
+            <a href="https://github.com/12220user">GIT HUB</a>
+        </nav>
     </div>
+
 
     <div class="content">
         <div class="project_card">
             <a name="quiz" id="empty" style="transform: scale(0px);"></a>
             <div class="row">
-                <div class="bg_image"></div>
-                <div>
-                    <h2>Генератор викторин with Yandex Game SDK</h3>
-                        <p>Позволяет быстро генерировать викторины с множеством категорий и делением вопросов по сложности, меняя всего один аргумент в проекте</p>
+                <div class="bg_image" style="background-image: url('../img/icons/1.jpg');"></div>
 
-                </div>
+            </div>
+            <div>
+                <h2><span class="obg">Quiz Engine</span> Генератор викторин with Yandex Game SDK</h3>
+                    <br>
+                    <p>Позволяет быстро генерировать викторины с множеством категорий и делением вопросов по сложности, меняя всего один аргумент в проекте</p>
             </div>
             <br>
-            <br>
-            <a href="https://github.com/12220user/quiz_game_engine_webapp">Исходник проекта</a>
-            <a href="https://white-noise-studio.gitbook.io/rukovodstvo-po-sozdaniyu-igry-viktorina-na-unity/">Документация</a>
-            <a href="./QUIZ_ENGINE/index.html">QQGT</a>
+            <nav class="prj_card_nav">
+                <a href="https://github.com/12220user/quiz_game_engine_webapp">Исходник проекта</a>
+                <a href="./QUIZ_ENGINE/index.html">QUIZ WORKSPACE</a> <a class="legacy-linq" href="./QUIZ_ENGINE/OLD/index.html">QQGT (LEGACY)</a>
+            </nav>
+
+            <div>
+                <h3>Проекты, созданные с использованием инстурмента :</h3>
+                <div class="linq_to_prj">
+                    <div class="img" style="background-image: url('https://avatars.mds.yandex.net/get-games/2977039/2a000001882520e37bb499eac4cfb46bb56e/pjpg268x268');"></div>
+                    <p>
+                        Школьные знания - Тест
+                    </p>
+
+                    <a href="https://yandex.ru/games/category/arcade?utm_medium=rsya&utm_source=yandex&utm_campaign=rus_games_feed-shop_yandex_rsya_460.new%7C73069758&utm_content=k50id%7C0100000037925659759_37925659759%7Ccid%7C73069758%7Cgid%7C4879255629%7Caid%7C13428302439%7Cadp%7Cno%7Cpos%7Cpremium1%7Csrc%7Csearch_none%7Cdvc%7Cdesktop%7Cmain&k50id=0100000037925659759_37925659759&utm_term=---autotargeting&back2catalog=true&a_delay=120000&yclid=5546749607281426431#app=229654">Открыть</a>
+                </div>
+                <div class="linq_to_prj">
+                    <div class="img" style="background-image: url('https://avatars.mds.yandex.net/get-games/1890793/2a00000188620880774ecd98ea076fc295c5/pjpg268x268');"></div>
+                    <p>
+                        Нубик учит математику
+                    </p>
+
+                    <a href="https://yandex.ru/games/category/arcade?utm_medium=rsya&utm_source=yandex&utm_campaign=rus_games_feed-shop_yandex_rsya_460.new%7C73069758&utm_content=k50id%7C0100000037925659759_37925659759%7Ccid%7C73069758%7Cgid%7C4879255629%7Caid%7C13428302439%7Cadp%7Cno%7Cpos%7Cpremium1%7Csrc%7Csearch_none%7Cdvc%7Cdesktop%7Cmain&k50id=0100000037925659759_37925659759&utm_term=---autotargeting&back2catalog=true&a_delay=120000&yclid=5546749607281426431#app=229213">Открыть</a>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script src="./scripts/print_text_effect.js"></script>
+    <script>
+        print_effect.write('#d-title', 'коллекция инструментов и проектов от 12220')
+    </script>
 </body>
 
 </html>
