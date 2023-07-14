@@ -234,3 +234,37 @@ h2 {
         content: '_';
     }
 }
+
+header .content h1 {
+    transition: 500ms;
+    display: block;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+    animation: 600ms ease-in-out startAnim;
+}
+
+header .content h1 span {
+    margin-left: 10px;
+}
+
+@keyframes startAnim {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.isDev-linq {
+    outline-color: brown !important;
+    color: brown;
+    cursor: no-drop;
+}
+
+.isDev-linq:hover {
+    background-color: brown !important;
+    color: var(--background-color);
+}

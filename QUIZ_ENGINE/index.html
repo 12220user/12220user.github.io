@@ -10,23 +10,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e54e91a3a3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <h3>QUIZ WORKSPACE</h3>
-    </header>
-    <section id="control_panel">
-        <nav>
-            <button>123</button>
-            <button>123</button>
-            <button>123</button>
-            <button>123</button>
+        <nav class="toolbar">
+            <span style="color: transparent;user-select: none;">       </span>
+            <button>Проекты</button>
+            <button>Создать</button>
         </nav>
-        <button id="hide_nav">
-            Cвернуть
-        </button>
-    </section>
+    </header>
+    <div id="content">
+        <section id="project_list" class="">
+            <div id="prj_name_list">
+                <button class="cubebtn">Title Name</button>
+                <button class="cubebtn">Title Na1111me</button>
+                <button class="cubebtn">Title 321321321321Name</button>
+                <button class="cubebtn">Title Na312321312me</button>
+                <button class="cubebtn">Title 321321Name</button>
+            </div>
+            <button class="cubebtn">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </section>
+        <section id="project_create" class=""></section>
+        <section id="project_edit" class=""></section>
+    </div>
+
+    <script src="./quiz_creator.js"></script>
 </body>
 
 </html>
