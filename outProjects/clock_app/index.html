@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style id="global_css_config"></style>
+</head>
+
+<body>
+    <section id="load_frame">
+        <h1>Загрузка...</h1>
+    </section>
+    <section id="clock_frame">
+        <div class="clock" id="clock_cnt">
+        </div>
+        <div class="bg_cl"></div>
+        <div id="btn_settings" style="display: none;">
+            <div class="icon" style="background-image: url('./source/icons/setting-lines.png');"></div>
+        </div>
+    </section>
+    <section id="settings_frame" class="hide">
+        <div class="st_body">
+            <div class="st_header">
+                <p>Настройки</p>
+                <div class="st_chapter" onclick="setGalleryState(0 , '#setting_content')">Базовые</div>
+                <div class="st_chapter" onclick="setGalleryState(1 , '#setting_content')">Циферблаты</div>
+                <div class="st_chapter" onclick="setGalleryState(2)">Фон</div>
+                <div class="st_chapter bk_btn" id="bk_btn_in_st">Назад</div>
+            </div>
+            <div id="setting_content">
+                <div class="settings_page">
+                    <h1>Базовые</h1>
+                    <br>
+                    <div class="settings_content">
+                        <div class="sub_st_section">
+                            <p>Размытие :</p>
+                            <input type="range" name="" id="blur_bg_slider" min="0" max="20" value="0" onchange="changeConfig(`backgroundBlur:${this.value}`)">
+                        </div>
+                    </div>
+                </div>
+                <div class="settings_page">
+                    <h1>Циферблаты</h1>
+                    <br>
+                    <div class="settings_content">
+
+                    </div>
+                </div>
+                <div class="settings_page">
+                    <h1>Фон</h1>
+                    <br>
+                    <div class="settings_content">
+
+                        <div class="sub_section">
+                            <div class="sub_section_toggle_header">
+                                <input type="radio" name="r_bg" id="color_bg" checked onclick="changeConfig('backgroundType:0')">
+                                <h1>Цвет</h1>
+                            </div>
+                            <div class="flex">
+                                <input type="color" id="background_color" onchange="changeConfig(`backgroundData_color:${this.value}`)">
+                                <p>Цвет заднего фона</p>
+                            </div>
+                            <div class="endln"></div>
+                        </div>
+
+                        <div class="sub_section">
+                            <div class="sub_section_toggle_header">
+                                <input type="radio" name="r_bg" id="gradient_bg" onclick="changeConfig('backgroundType:1')">
+                                <h1>Градиетн</h1>
+                            </div>
+                            <div class="flex">
+                                <input type="color" id="gradient_left" onchange="changeConfig(`backgroundData_graadient_left:${this.value}`)">
+                                <p>Левый угол</p>
+
+                                <input type="color" id="gradient_right" onchange="changeConfig(`backgroundData_graadient_right:${this.value}`)">
+                                <p>Правый угол</p>
+                            </div>
+                            <div class="endln"></div>
+                        </div>
+
+                        <div class="sub_section">
+                            <div class="sub_section_toggle_header">
+                                <input type="radio" name="r_bg" id="image_bg" onclick="changeConfig('backgroundType:2')">
+                                <h1>Изображение</h1>
+                            </div>
+
+                            <div id="img_collection">
+                                <div class="img_st_profile">
+                                    <div class="photo" style="background-image: url('./source/backgrounds/1.jpg');"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="confirm_form" class="special_hide">
+        <h1 id="confirm_text">Сообщение</h1>
+        <div class="flex" style="justify-content: center;">
+            <button id="confirm_accept">Да</button>
+            <button id="confirm_cancel">Отмена</button>
+        </div>
+    </section>
+
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/WebGameToolkit.js"></script>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/config_manager.js"></script>
+    <script src="./scripts/game.js"></script>
+</body>
+
+</html>
